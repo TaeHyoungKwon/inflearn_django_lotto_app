@@ -20,3 +20,7 @@ class GuessNumbers(models.Model):
             self.lottos += str(guess) + "\n"
         self.update_date = timezone.now()
         self.save()
+
+
+    def __str__(self):
+        return "%s %s" % (self.name, self.text)
